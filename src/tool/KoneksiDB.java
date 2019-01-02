@@ -1,8 +1,8 @@
-package tool;
-import java.sql.*;
+package Tool;
 
+import java.sql.*;
+ 
 public class KoneksiDB {
-    
     public Connection getConnection() throws SQLException{
         Connection cnn;
         try{
@@ -11,10 +11,9 @@ public class KoneksiDB {
             Class.forName(drever);
             cnn = DriverManager.getConnection(server, "root", "");
             return cnn;
-        }catch(SQLException | ClassNotFoundException se ){
+        }catch(SQLException | ClassNotFoundException se){
             System.out.println(se);
             return null;
         }
     }
-    
 }
