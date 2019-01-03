@@ -102,13 +102,6 @@ public class IfrUser extends javax.swing.JInternalFrame {
              JOptionPane.showMessageDialog(this,"Error method showDataTabel() : "+ex);
          }
      }
-      private void validasiId(){
-        String sqlku = "SELECT id_user from tbuser ";
-        
-        if(vid_user.equals(sqlku)){
-           System.out.println("ID. User telah digunakan"); 
-        }
-    }
      private void aksiSimpan(){
         
          
@@ -124,8 +117,7 @@ public class IfrUser extends javax.swing.JInternalFrame {
          }
          
          try{ 
-             
-             validasiId();
+            
              _Cnn = null;
              _Cnn = getCnn.getConnection();
              Statement stat = _Cnn.createStatement();
